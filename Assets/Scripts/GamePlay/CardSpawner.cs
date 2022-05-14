@@ -6,39 +6,39 @@ namespace GamePlay
 {
     public class CardSpawner : MonoBehaviour
     {
-        [SerializeField] private Grid _grid = null;
-        [SerializeField] private PresetCards _presetCards = null;
-        [SerializeField] private Card _cardPrefab = null;
-        [SerializeField] private UnityEvent _startCollect = new UnityEvent();
+        [SerializeField] private Grid grid = null;
+        [SerializeField] private PresetCards presetCards = null;
+        [SerializeField] private Card cardPrefab = null;
+        [SerializeField] private UnityEvent startCollect = new UnityEvent();
         
         public void Spawn()
         {
             Transform localTransform = GetComponent<Transform>();
             Card card;
-            Sprite backSprite = _presetCards.GetBackSprite();
-            List<Sprite> playCardsSprites = _presetCards.GetPlayCardsSprites();
+            Sprite backSprite = presetCards.GetBackSprite();
+            List<Sprite> playCardsSprites = presetCards.GetPlayCardsSprites();
             
-            int[] playCardsIndex = _presetCards.GetCardIndex();
-            float positionX = _grid.GetPositionX();
-            float positionY = _grid.PositionY;
-            int count = _grid.GetColumsCount();
+            int[] playCardsIndex = presetCards.GetCardIndex();
+            float positionX = grid.GetPositionX();
+            float positionY = grid.PositionY;
+            int count = grid.GetColumsCount();
 
             for (int j = 0; j < playCardsIndex.Length; j++)
             {
-                card = Instantiate(_cardPrefab) as Card;
+                card = Instantiate(cardPrefab) as Card;
                 card.transform.position = new Vector3(positionX, positionY + localTransform.position.y);
                 card.transform.parent = localTransform;
                 card.CardsSettings(backSprite, playCardsSprites[playCardsIndex[j]], playCardsIndex[j]);
-                positionX += _grid.OffsetX;
+                positionX += grid.OffsetX;
                 count--;
                 if (count < 1)
                 {
-                    count = _grid.GetColumsCount();
-                    positionY -= _grid.OffsetY;
-                    positionX = _grid.GetPositionX();
+                    count = grid.GetColumsCount();
+                    positionY -= grid.OffsetY;
+                    positionX = grid.GetPositionX();
                 }
             }
-            _startCollect.Invoke();
+            startCollect.Invoke();
         }
     }
 }

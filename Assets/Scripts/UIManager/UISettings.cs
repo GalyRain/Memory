@@ -1,30 +1,30 @@
-using System;
 using Assets;
 using UnityEngine;
-using TMPro;
 using UnityEngine.UI;
 
-public class UISettings : MonoBehaviour
+namespace UIManager
 {
+    public class UISettings : MonoBehaviour
+    {
 
-    [SerializeField] private LevelData _levelData = null;
-    [SerializeField] private Button _levelButtom = null;
-    [SerializeField] private Button _themeButtom = null;
+        [SerializeField] private LevelData levelData = null;
+        [SerializeField] private Button levelButton = null;
+        [SerializeField] private Button themeButton = null;
     
-    public void SetDifficult(int value)
-    {
-        _levelData.MaxPlayCards = value;
-    }
+        public void SetDifficult(int value)
+        {
+            levelData.maxPlayCards = value;
+        }
 
-    public void SetTheme(string name)
-    {
-        _levelData.ThemeName = name;
-    }
+        public void SetTheme(string name)
+        {
+            levelData.themeName = name;
+        }
 
-    private void OnEnable()
-    {
-        _levelButtom.onClick.Invoke();
-        _themeButtom.onClick.Invoke();
+        public void OnEnable()
+        {
+            levelButton.onClick.Invoke();
+            themeButton.onClick.Invoke();
+        }
     }
 }
-

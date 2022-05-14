@@ -13,7 +13,7 @@ namespace GamePlay
 
         public int GetColumsCount()
         {
-            return _levelData.MaxPlayCards;
+            return _levelData.maxPlayCards;
         }
 
         public float GetPositionX()

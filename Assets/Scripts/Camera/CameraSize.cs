@@ -15,8 +15,8 @@ namespace Camera
 
         private static void CameraResize()
         {
-            var screenRatio = (float)Screen.width / Screen.height;
-            const float targetRadio = TargetSizeX / TargetSizeY;
+            float screenRatio = (float)Screen.width / Screen.height;
+            float targetRadio = TargetSizeX / TargetSizeY;
 
             if (screenRatio >= targetRadio)
             {
@@ -24,12 +24,12 @@ namespace Camera
             }
             else
             {
-                var differentSize = targetRadio / screenRatio;
+                float differentSize = targetRadio / screenRatio;
                 Resize(differentSize);
             }
         }
 
-        private static void Resize(float differentSize = 1.0f)
+        private static void Resize(float differentSize = 1f)
         {
             if (UnityEngine.Camera.main != null)
                 UnityEngine.Camera.main.orthographicSize = TargetSizeY / HalfSize * differentSize;

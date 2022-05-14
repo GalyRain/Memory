@@ -11,18 +11,17 @@ namespace GamePlay
         private Sprite _backSprite = null;
         private List<Sprite> _allSprites = null;
         
-        [SerializeField] private LevelData _levelData = null;
-        [SerializeField] private UnityEvent _onLoade = new UnityEvent();
+        [SerializeField] private LevelData levelData = null;
+        [SerializeField] private UnityEvent onLoad = new UnityEvent();
         
         private readonly ResourcesLoader _resourcesLoader = new ResourcesLoader();
-        
-        
+
         public void GetSprite()
         {
-            Theme theme = _resourcesLoader.GetTheme(_levelData.ThemeName);
-            _backSprite = theme.BackSprite;
-            _allSprites = theme.AllSprites;
-            _onLoade.Invoke();
+            Theme theme = _resourcesLoader.GetTheme(levelData.themeName);
+            _backSprite = theme.backSprite;
+            _allSprites = theme.allSprites;
+            onLoad.Invoke();
         }
         
         public Sprite GetBackSprite()
@@ -33,7 +32,7 @@ namespace GamePlay
         public List<Sprite> GetPlayCardsSprites()
         {
             List<Sprite> sprites = new List<Sprite>(_allSprites);
-            while (_levelData.MaxPlayCards < sprites.Count)
+            while (levelData.maxPlayCards < sprites.Count)
             {
                 sprites.RemoveAt(Random.Range(0, sprites.Count));
             }
@@ -42,7 +41,7 @@ namespace GamePlay
 
         public int[] GetCardIndex()
         {
-            int[] cardIndex = new int[_levelData.MaxPlayCards * 2];
+            int[] cardIndex = new int[levelData.maxPlayCards * 2];
             for (int i = 0; i < cardIndex.Length; i++)
             {
                 cardIndex[i] = i / 2;

@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e10126454b364d81b570c545323783c, type: 3}
   m_Name: ThemeEye
   m_EditorClassIdentifier: 
-  BackSprite: {fileID: 21300000, guid: e977158c26dc8ee499d4006b7098ea8d, type: 3}
-  AllSprites:
+  backSprite: {fileID: 21300000, guid: e977158c26dc8ee499d4006b7098ea8d, type: 3}
+  allSprites:
   - {fileID: 21300000, guid: 8705b5eabe1cefa4681c6656508b89d8, type: 3}
   - {fileID: 21300000, guid: a2fadacd7e7d91e45b5dd00efdba1991, type: 3}
   - {fileID: 21300000, guid: 08c304e1f61a28e44a77bfef2813eb87, type: 3}
   - {fileID: 21300000, guid: 406e89c482e2de3499e25a3020d1e340, type: 3}
   - {fileID: 21300000, guid: acd0d6ea6678e9246b3bb186d165c461, type: 3}
+  - {fileID: 21300000, guid: fee071f92731965419cc0887b304fb62, type: 3}
   - {fileID: 21300000, guid: 5b7e6a8e07235dd4d9869f37745e73dd, type: 3}
-  - {fileID: 21300000, guid: 9e8f58e968bb5d74e84129dd94161fb5, type: 3}
   - {fileID: 21300000, guid: 5b2f7f1a5668eab458ece82b6aee3ae5, type: 3}
+  - {fileID: 21300000, guid: 9e8f58e968bb5d74e84129dd94161fb5, type: 3}

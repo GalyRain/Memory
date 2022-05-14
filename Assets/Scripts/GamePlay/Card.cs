@@ -32,12 +32,12 @@ namespace GamePlay
             }
         }
 
-        public void EnableCollider()
+        private void EnableCollider()
         {
             _boxCollider2D.enabled = true;
         }
 
-        public void ChangeSpriteCard()
+        private void ChangeSpriteCard()
         {
             _spriteRenderer.sprite = _isBackSide == true ? _backSprite : _frontSprite;
         }

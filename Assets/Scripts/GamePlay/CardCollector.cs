@@ -10,8 +10,8 @@ namespace GamePlay
         private Card _secondCard;
         private int _countCards;
 
-        [SerializeField] private BoolEvent _scoreAdd = new BoolEvent();
-        [SerializeField] private UnityEvent _onGameEnded = new UnityEvent();
+        [SerializeField] private BoolEvent scoreAdd = new BoolEvent();
+        [SerializeField] private UnityEvent onGameEnded = new UnityEvent();
         
         public void FindCards()
         {
@@ -44,17 +44,17 @@ namespace GamePlay
                 Destroy(_firsCard.GameObject());
                 Destroy(_secondCard.GameObject());
                 _countCards -= 2;
-                _scoreAdd.Invoke(true);
+                scoreAdd.Invoke(true);
                 if (_countCards < 2)
                 {
-                    _onGameEnded.Invoke();
+                    onGameEnded.Invoke();
                 }
             }
             else
             {
                 _firsCard.CardAnimation();
                 _secondCard.CardAnimation();
-                _scoreAdd.Invoke(false);
+                scoreAdd.Invoke(false);
             }
             _firsCard = null;
             _secondCard = null;

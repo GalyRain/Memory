@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da86eaeabf8cf4aacb84f994ae7de848, type: 3}
   m_Name: LevelData
   m_EditorClassIdentifier: 
-  MaxPlayCards: 3
-  ThemeName: ThemeCat
+  maxPlayCards: 3
+  themeName: ThemeCat

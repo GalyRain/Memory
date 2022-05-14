@@ -609,7 +609,7 @@ GameObject:
   - component: {fileID: 882607291}
   - component: {fileID: 882607290}
   m_Layer: 0
-  m_Name: MainCamera
+  m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1165,22 +1165,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 067e20fb0ae0a4e93a347b645a5920d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scoreAdd:
+  scoreAdd:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1253435733}
         m_TargetAssemblyTypeName: GamePlay.Score, Assembly-CSharp
         m_MethodName: AddRemove
-        m_Mode: 0
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
-  _onGameEnded:
+  onGameEnded:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1724271598}
@@ -1222,10 +1222,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f05e26875e3f04757a793eab88f13877, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _grid: {fileID: 1253435735}
-  _presetCards: {fileID: 1253435734}
-  _cardPrefab: {fileID: 1150695687019965761, guid: d725775d409d7479cb3ee50b41d74230, type: 3}
-  _startCollect:
+  grid: {fileID: 1253435735}
+  presetCards: {fileID: 1253435734}
+  cardPrefab: {fileID: 1150695687019965761, guid: d725775d409d7479cb3ee50b41d74230, type: 3}
+  startCollect:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1253435729}
@@ -1264,11 +1264,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1093e1a5a68594225b69b3f4b6dd7a42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _onUpdate:
+  onUpdate:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2081479173}
-        m_TargetAssemblyTypeName: UIManager.UIScare, Assembly-CSharp
+        m_TargetAssemblyTypeName: UIManager.UIScore, Assembly-CSharp
         m_MethodName: UpdateText
         m_Mode: 3
         m_Arguments:
@@ -1291,8 +1291,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 261192f49b424459ba2fa0f09d3dac4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelData: {fileID: 11400000, guid: 0d2e713628fa843139be0f5e4ee27aee, type: 2}
-  _onLoade:
+  levelData: {fileID: 11400000, guid: 0d2e713628fa843139be0f5e4ee27aee, type: 2}
+  onLoad:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1253435731}
@@ -1332,7 +1332,7 @@ GameObject:
   - component: {fileID: 1426078756}
   - component: {fileID: 1426078755}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TextScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2426,7 +2426,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2081479171}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5147381, y: -1.4004513, z: 258.88858}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2445,7 +2445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffa5dedff2eaa4efc8e3ea5b356526c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _text: {fileID: 1426078755}
+  textScore: {fileID: 1426078755}
 --- !u!114 &2081479174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2458,9 +2458,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 456a0ad154c6c4f60b89b75711bb19e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelData: {fileID: 11400000, guid: 0d2e713628fa843139be0f5e4ee27aee, type: 2}
-  _levelButtom: {fileID: 1091270962}
-  _themeButtom: {fileID: 1757023820}
+  levelData: {fileID: 11400000, guid: 0d2e713628fa843139be0f5e4ee27aee, type: 2}
+  levelButton: {fileID: 1854420797}
+  themeButton: {fileID: 1757023820}
 --- !u!114 &2081479175
 MonoBehaviour:
   m_ObjectHideFlags: 0

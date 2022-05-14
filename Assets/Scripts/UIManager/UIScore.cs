@@ -5,16 +5,11 @@ namespace UIManager
 {
     public class UIScore : MonoBehaviour
     {
-        [SerializeField] private TextMeshProUGUI _text = null;
-
-        private void Awake()
+        [SerializeField] private TextMeshProUGUI textScore = null;
+ 
+        public void UpdateText(int value)
         {
-            _text = GetComponent<TextMeshProUGUI>();
-        }
-
-        public void UpdateText(int? value)
-        {
-            _text.text = ((int?)null).ToString();
+            textScore.text = (value.ToString());
         }
     }
 }
